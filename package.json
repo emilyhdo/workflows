@@ -1,0 +1,15 @@
+{
+  "name": "workflows",
+  "version": "1.0.0",
+  "description": "Learn workflows",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Emily Do",
+  "license": "ISC"
+}
