@@ -7,6 +7,7 @@ var browserify = require('gulp-browserify');
 var connect = require('gulp-connect');
 var gulpif = require('gulp-if');
 var uglify = require('gulp-uglify');
+var htmlmin = require('gulp-htmlmin');
 
 var outputDir;
 var env = process.env.NODE_ENV || "development";
@@ -59,7 +60,7 @@ gulp.task('watch', function(){
 	gulp.watch(coffeeSources, ['coffee']);
 	gulp.watch(jsSources, ['js']);
 	gulp.watch('components/sass/*.scss', ['compass']);
-	gulp.watch(htmlSources, ['html']);
+	gulp.watch('builds/development/*.html', ['html']);
 	gulp.watch(jsonSources, ['json']);
 	gulp.watch(imagesSources, ['images']);
 });
@@ -72,7 +73,9 @@ gulp.task('connect', function() {
 });
 
 gulp.task('html', function(){
-	gulp.src(htmlSources)
+	gulp.src('builds/development/*.html')
+		.pipe(gulpif(env==='production', htmlmin({collapseWhitespace: true})))
+		.pipe(gulpif(env==='production', gulp.dest(outputDir)))
 		.pipe(connect.reload());
 });
 
@@ -86,7 +89,7 @@ gulp.task('images', function(){
 		.pipe(connect.reload());	
 });
 
-gulp.task('default', ['coffee', 'js', 'compass', 'connect', 'watch']);
+gulp.task('default', ['html','json','images','coffee', 'js', 'compass', 'connect', 'watch']);
 
 
 
