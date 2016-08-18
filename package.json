@@ -2,7 +2,7 @@
   "name": "workflows",
   "version": "1.0.0",
   "description": "Learn workflows",
-  "engine" : "gulp",
+  "engines" : "gulp",
   "main": "index.html",
   "scripts": {
 	"postinstall" : "gulp default",

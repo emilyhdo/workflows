@@ -100,7 +100,7 @@ gulp.task('serveprod', function() {
   });
 });
 
-gulp.task('default', ['html','json','images','coffee', 'js', 'compass', 'connect', 'watch']);
-
+// gulp.task('default', ['html','json','images','coffee', 'js', 'compass', 'connect', 'watch']);
+gulp.task('default', ['serveprod']);
 
 
