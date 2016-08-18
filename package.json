@@ -4,7 +4,8 @@
   "description": "Learn workflows",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+	"prestart": "echo Run_Gulp",
+	"start": "gulp"
   },
   "repository": {
     "type": "git",
