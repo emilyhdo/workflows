@@ -5,7 +5,6 @@
   "engines" : "gulp",
   "main": "index.html",
   "scripts": {
-//	"postinstall" : "gulp default",
 	"prestart": "echo Run_Gulp",
 	"start": "gulp gulpfile.js"
   },
