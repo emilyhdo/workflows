@@ -2,6 +2,7 @@
   "name": "workflows",
   "version": "1.0.0",
   "description": "Learn workflows",
+  "engine" : "gulp",
   "main": "index.html",
   "scripts": {
 	"prestart": "echo Run_Gulp",
