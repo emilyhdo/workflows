@@ -2,11 +2,10 @@
   "name": "workflows",
   "version": "1.0.0",
   "description": "Learn workflows",
-  "engines" : "gulp",
   "main": "index.html",
   "scripts": {
 	"prestart": "echo Run_Gulp",
-	"start": "gulp gulpfile.js"
+	"start": "gulp"
   },
   "repository": {
     "type": "git",
