@@ -92,6 +92,14 @@ gulp.task('images', function(){
 		.pipe(connect.reload());	
 });
 
+gulp.task('serveprod', function() {
+  connect.server({
+    root: outputDir,
+    port: process.env.PORT || 5000, // localhost:5000
+    livereload: false
+  });
+});
+
 gulp.task('default', ['html','json','images','coffee', 'js', 'compass', 'connect', 'watch']);
 
 
